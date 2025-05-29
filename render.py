@@ -10,7 +10,7 @@ from src.data import Data
 this_dir = Path(__file__).parent
 data = Data.load(this_dir / "data")
 template_dir = this_dir / "templates"
-output_dir = this_dir / "output"
+output_dir = this_dir / "docs"
 
 loader = FileSystemLoader(template_dir)
 env = Environment(loader=loader, autoescape=select_autoescape())
