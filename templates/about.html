@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block about_state %}active{% endblock %}
+
+{% block top %}
+<div class="col-sm-12 text-left">
+  <h2>The site</h2>
+  <p>This website is a place to record your attempt at doing a route half as fast as the current record.</p>
+  <p><a style="color: green; font-size: 100%;">●</a> You get a green dot if you successfully complete the route within the cutoff time.</p>
+  <p><a style="color: grey; font-size: 100%;">●</a> You get a grey dot if you complete the route, but not within the cutoff time.</p>
+  <p><a style="color: grey; font-size: 100%;">◕</a> You get a partial grey dot if you don't complete the route.</p>
+  <p>Hovering over the green or grey dot shows a few more details.</p>
+  <p>It's still worth submitting unsuccessful half-as-fast attempts, so long as you had twice the fun of not trying at all!</p>
+  <h2>Guidelines</h2>
+  <p>The ethos of Half as Fast is about be inspired to take on a challenge. As such, we're pretty loose on exactly what does and doesn't count.</p>
+  <p><b>Accepted routes:</b> Any route that has inpired you to do attempt a Half as Fast is good enough for this website. It could be a significant Strava segment, a local parkrun, a novelty event like a "beer mile", or an epic multi-day and multi-sport adventure.</p>
+  <p><b>Styles:</b> When determining the Half as Fast cutoff time we don't distinguish between unsupported, self-supported, and supported records, or between individual and group based records - we just take whichever is the fastest. After all, you're not here to break records. If you're unsupported and finish at least half as fast as a supported record, then extra kudos to you!</p>
+  <p><b>Verification:</b> There is none! When you submit you'll be asked for a link, this can be your Strava recording, a blog post, or an Insta pic. It doesn't have to conclusively prove you've done it, just be fairly convincing to the others browsing the site.</p>
+  <h2>About Us</h2>
+  <p>Hi, Liam and Em here, a couple from Perth. We tried our first Half as Fast on the Wiilman Bilya trail when looking for a challenge that's more fun than a training plan from a run coach. It's help us stay excited about exploring the beautiful trails in our part of the world.</p>
+</div>
+{% endblock top %}

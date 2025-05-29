@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block home_state %}active{% endblock %}
+
+{% block top %}
+<div class="col-sm-12 text-left">
+  <h1>Half as Fast</h1>
+  <p>What's a Half as Fast you say? Well, simply take your favourite route or trail, find the fastest recorded time and double it. It's a challenge designed for mere mortals, but a formidable challenge nevertheless.</p>
+  <p>Do you love a challenge, but are too realistic to be motivated by the idea of breaking records? Do you dream about FKTs, but have no natural ability or genetic advantage? Then maybe going Half as Fast is just what you need to have <b>twice the fun</b>.</p>
+</div>
+{% endblock top %}
+
+{% block bottom %}
+{% for route, record, haf_list in data.iter_routes() %}
+<div class="row card">
+  <div class="card-top col-sm-12 text-left" style="background-color: rgb(16, 16, 16)">
+    <h3 style="color: rgb(157, 157, 157)"><b>{{ route.name }}</b> ({{route.state}})</h3>
+  </div>
+  <div class="col-sm-12 text-left" style="background-color: #e6e6e6;">
+    <br>
+    <p>{{ route.description }} (<a href="{{ route.link }}" target="_blank">⤴more info</a>).</p>
+    <p>
+      <b>Distance:</b> {{ route.distance }} km 
+      <br><b>Record:</b> {{ record.time }}</a> (<a href="{{ record.link }}" target="_blank">⤴{{ get_domain(record.link) }}</a>)
+      <br><b>Half as Fast cutoff:</b> {{ record.time * 2 }}</a> ({{ record.calc_pace(route.distance) }})
+    </p>
+  </div>
+  <div class="col-sm-12 text-left">
+    <br>
+    {% for haf in haf_list %}
+    {% if loop.index0 > 0 %}<hr>{% endif %}
+    <p style="text-align: left;">
+      {% if haf.half_as_fast %}
+      <a style="color: green; font-size: 200%; cursor:pointer;" title="Finished in {{ haf.time }}">●</a>
+      <b>Half as fast</b>
+      {% elif haf.complete %}
+      <a style="color: grey; font-size: 200%; cursor:pointer;" title="Finished in {{ haf.time }} (past cutoff)">●</a>
+      <b>Twice as fun</b>
+      {% else %}
+      <a style="color: grey; font-size: 200%; cursor:pointer;" title="Completed {{ haf.distance }} km ({{ haf.percentage_complete(route.distance) }}) in {{ haf.time }}">◕</a>
+      <b>Twice as fun</b>
+      {% endif %}
+      &nbsp; &nbsp; &nbsp; &nbsp;
+      {{ haf.date }}
+      &nbsp; &nbsp; &nbsp; &nbsp;
+      <b>{{ haf.people }}</b>
+      &nbsp; &nbsp; &nbsp; &nbsp;
+      <a href="{{ haf.link }}" target="_blank">⤴{{ get_domain(haf.link) }}</a>
+    </p>
+    {% endfor %}
+  </div>
+</div>
+{% endfor %}
+{% endblock bottom %}

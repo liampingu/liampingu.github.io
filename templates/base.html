@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Half as Fast</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    .background {
+      background-color: rgb(146, 43, 43);
+    }
+
+    .card{
+      max-width: 920px;
+      margin: 36px auto;
+      border-radius: 16px;
+      background-color: white;
+    }
+
+    .card-top {
+      border-top-left-radius: 16px;
+      border-top-right-radius: 16px;
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+    }
+  </style>
+</head>
+
+<body class="background">
+<div class="row card">
+  <nav class="navbar-inverse card-top">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand">#</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="{% block home_state %}{% endblock %}"><a href="index.html">Home</a></li>
+        <li class="{% block about_state %}{% endblock %}"><a href="about.html">About</a></li>
+        <li><a href="https://forms.gle/CFUrzc5fjMSjK2Q18" target="_blank">⤴ Submit</a></li>
+      </ul>
+    </div>
+  </nav>
+  {% block top required %}{% endblock top %}
+</div>
+{% block bottom %}{% endblock bottom %}
+</body>
+</html>
