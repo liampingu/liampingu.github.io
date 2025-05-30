@@ -5,7 +5,15 @@ A simple static website for displaying attempts to complete routes half as fast 
 
 ## To build
 
-* Install dependencies: `python -m pip install jinja2 pandas`
+* Install dependencies: `python -m pip install jinja2 pandas`.
 * Update data: edit `data/*.csv` files
-* Render: `python render.py`. This produces HTML files at `output/*.html`
-* 
+* Render: `python render.py`. This produces HTML files at `docs/*.html`.
+* Push changes to GitHub: `git add docs; git commit -m 're-rendered'; git push`. Make sure changes are in `main` branch.
+* Check website: wait a minute then go to `https://halfasfast.com.au` to check the changes.
+
+
+## Hosting and domain
+
+GitHub Pages is used for hosting. HTML in the `docs/` folder in the `main` branch is automatically published. The `docs/CNAME` file must contain the domain: `halfasfast.com.au`. Other GitHub Pages configuration is available under this repository's settings under "Pages".
+
+GoDaddy is used for DNS configuration.
