@@ -21,9 +21,9 @@ def get_domain(url: str) -> str:
         result = result[4:]
     return result
 
-if output_dir.exists():
-    print(f"Deleting '{output_dir}'...")
-    shutil.rmtree(output_dir)
+for path in output_dir.rglob("*.html"):
+    print(f"Deleting {path}...")
+    path.unlink()
 
 for file in ["index.html", "about.html"]:
     print(f"Rendering '{file}'...")
