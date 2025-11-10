@@ -14,6 +14,6 @@ A simple static website for displaying attempts to complete routes half as fast 
 
 ## Hosting and domain
 
-GitHub Pages is used for hosting. HTML in the `docs/` folder in the `main` branch is automatically published. The `docs/CNAME` file must contain the domain: `halfasfast.com.au`. Other GitHub Pages configuration is available under this repository's settings under "Pages".
+GitHub Pages is used for hosting. HTML in the `docs/` folder in the `main` branch is automatically published to `https://liampingu.github.io`. Other GitHub Pages configuration is available under this repository's settings under "Pages".
 
-GoDaddy is used for DNS configuration.
+The domain `halfasfast.com.au` is registered with GoDaddy, with "Forward with masking" option enabled. This embeds the Github Pages site with a HTML frame.
