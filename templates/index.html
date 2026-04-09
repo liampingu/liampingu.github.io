@@ -47,7 +47,7 @@
       &nbsp; &nbsp; &nbsp; &nbsp;
       <b>{{ haf.people }}</b>
       &nbsp; &nbsp; &nbsp; &nbsp;
-      <a href="{{ haf.link }}" target="_blank">⤴{{ get_domain(haf.link) }}</a>
+      {% if haf.link != "#" %}<a href="{{ haf.link }}" target="_blank">⤴{{ get_domain(haf.link) }}</a>{% endif %}
     </p>
     {% endfor %}
   </div>
