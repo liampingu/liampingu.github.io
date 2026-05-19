@@ -36,7 +36,7 @@
       <a style="color: green; font-size: 100%; cursor:pointer;" title="Finished in {{ haf.time }}">⬤</a>
       <b>Half as fast</b>
       {% elif haf.complete %}
-      <a style="color: yellow; font-size: 100%; cursor:pointer;" title="Finished in {{ haf.time }} (past cutoff)">⬤</a>
+      <a style="color: gold; font-size: 100%; cursor:pointer;" title="Finished in {{ haf.time }} (past cutoff)">⬤</a>
       <b>Twice as fun</b>
       {% else %}
       <a style="color: red; font-size: 100%; cursor:pointer;" title="Completed {{ haf.distance }} km ({{ haf.percentage_complete(route.distance) }}) in {{ haf.time }}">⬤</a>
