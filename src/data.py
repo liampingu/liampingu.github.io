@@ -82,7 +82,7 @@ class Haf:
     date: date
     people: str
     time: timedelta
-    distance: float
+    percent_complete: float
     complete: bool
     half_as_fast: bool
     link: str
@@ -95,19 +95,16 @@ class Haf:
             haf_list.append(
                 Haf(
                     route_id=row["route_id"],
-                    date=row["date"],
+                    date=date.fromisoformat(row["date"]),
                     people=row["people"],
                     time=parse_timedelta(row["time"]),
-                    distance=row["distance"],
+                    percent_complete=row["percent_complete"],
                     complete=row["complete"],
                     half_as_fast=row["half_as_fast"],
                     link=row["link"],
                 )
             )
         return haf_list
-    
-    def percentage_complete(self, route_distance: float) -> str:
-        return f"{self.distance / route_distance:.0%}"
 
 
 

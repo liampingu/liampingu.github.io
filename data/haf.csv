@@ -1,8 +1,8 @@
-route_id,date,people,time,distance,complete,half_as_fast,link
-wiilman-bilya-trail,30/11/2024,"Liam Hayes, Emily Hull",15:39:28,77.66,FALSE,FALSE,https://weareexplorers.co/half-as-fast-trail-running-challenge/
-lake-monger,21/09/2022,Liam Hayes,0:13:53,3.5,TRUE,TRUE,https://strava.app.link/tdcctdMFmTb
-cape-to-cape-track,12/11/2025,Liam Hayes,24:37:47,123,TRUE,TRUE,https://www.strava.com/activities/16471859157
-central-park-stairs,16/01/2026,"Mike Reid, Liam Hayes",0:09:28,0.4,TRUE,TRUE,#
-central-park-stairs,14/05/2026,"Ali Masoum, Tony Murphy",00:09:45,0.4,TRUE,TRUE,#
-central-park-stairs,29/05/2026,"Adrian Pearce",00:09:29,0.4,TRUE,TRUE,#
-central-park-stairs,25/06/2023,"James McIntosh",00:07:34,0.4,TRUE,TRUE,#
+route_id,date,people,time,percent_complete,complete,half_as_fast,link
+wiilman-bilya-trail,2024-11-30,"Liam Hayes, Emily Hull",15:39:28,89,FALSE,FALSE,https://weareexplorers.co/half-as-fast-trail-running-challenge/
+lake-monger,2022-09-21,Liam Hayes,0:13:53,100,TRUE,TRUE,https://strava.app.link/tdcctdMFmTb
+cape-to-cape-track,2025-11-12,Liam Hayes,24:37:47,100,TRUE,TRUE,https://www.strava.com/activities/16471859157
+central-park-stairs,2026-01-16,"Mike Reid, Liam Hayes",0:09:28,100,TRUE,TRUE,#
+central-park-stairs,2026-05-14,"Ali Masoum, Tony Murphy",00:09:45,100,TRUE,TRUE,#
+central-park-stairs,2026-05-29,"Adrian Pearce",00:09:29,100,TRUE,TRUE,#
+central-park-stairs,2023-06-25,"James McIntosh",00:07:34,100,TRUE,TRUE,#

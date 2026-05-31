@@ -2,7 +2,6 @@ from pathlib import Path
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 from urllib.parse import urlparse
 from pathlib import Path
-import shutil
 
 from src.data import Data
 
